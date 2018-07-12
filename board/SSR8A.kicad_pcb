@@ -1817,7 +1817,7 @@
   )
 
   (gr_line (start 102.5 92.5) (end 159 92.5) (layer F.SilkS) (width 0.2))
-  (gr_text "DEVICE.FARM   SSR v1.0   CC-BY-SA   Max load: 2A / channel" (at 130.5 91) (layer F.SilkS)
+  (gr_text "DEVICE.FARM   SSR8A v1.0   CC-BY-SA   Max load: 2A/channel" (at 130.5 91) (layer F.SilkS)
     (effects (font (size 1.1 1.1) (thickness 0.275)))
   )
   (gr_text Address (at 169 97.5) (layer B.SilkS)

@@ -1,14 +1,22 @@
-/* global DF, Switch, Timer */
+/* global RegisterGPO, Register, RegisterDS18B20 */
 
-load("api_log.js");
-load("api_df.js");
-load("api_df_relay.js");
-load("api_df_ds18b20.js");
+load('api_config.js');
+load("api_gpio.js");
+load("api_timer.js");
+load("api_i2c.js");
 
-let services = {
-	Relay: Relay.create(4, true),
-	LED: Relay.create(5, false),
-	Temp: DS18B20.create(12)
-};
+load("api_df_reg.js");
+load("api_df_reg_gpo.js");
+load("api_df_reg_pcf8574.js");
 
-DF.init("DEVICE-FARM", "CR1TS1A", services);
+let i2c = I2C.get();
+
+let ledPin = Cfg.get("ssr8.led");
+print("LED pin", ledPin);
+Register.add("led", RegisterGPO.create(ledPin));
+
+let pcfAddress = Cfg.get("ssr8.pcf8574");
+print("PCF8574 address", pcfAddress);
+let pcf = PCF8574.create(pcfAddress, i2c);
+
+Register.add("ssr8", pcf.createRegister(0, 7, 0, false));

@@ -11,9 +11,10 @@ load("api_df_reg_pcf8574.js");
 
 let i2c = I2C.get();
 
-let ledPin = Cfg.get("ssr8.led");
-print("LED pin", ledPin);
-Register.add("led", RegisterGPO.create(ledPin));
+let ledName = Cfg.get("ssr8.led.name");
+let ledPin = Cfg.get("ssr8.led.pin");
+print("LED", ledName, "at pin", ledPin);
+Register.add(ledName, RegisterGPO.create(ledPin));
 
 let pcfAddress = Cfg.get("ssr8.pcf8574");
 print("PCF8574 address", pcfAddress);

@@ -11,6 +11,7 @@ sources:
 
 filesystem:
   - fs
+  - fs-build
 
 libs:
   - origin: ../../mg-df-core
@@ -22,7 +23,9 @@ config_schema:
   - ["i2c.debug", true]
   - ["ssr8", "o", {title: "Electric Heating"}]
   - ["ssr8.pcf8574", "i", 56, {"title": "PCF8574 I2C address"}]
-  - ["ssr8.led", "i", 4, {"title": "LED pin number"}]
+  - ["ssr8.led", "o", {"title": "LED register"}]
+  - ["ssr8.led.name", "s", "led", {"title": "LED register name"}]
+  - ["ssr8.led.pin", "i", 4, {"title": "LED pin number"}]
   - ["ssr8.regCount", "i", 8, {"title": "Number of registers"}]
   - ["ssr8.reg0", "o", {"title": "Register 0"}]
   - ["ssr8.reg0.name", "s", "gpo0", {"title": "Register 0 name"}]

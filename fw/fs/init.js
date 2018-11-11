@@ -31,8 +31,6 @@ for (let r = 0; r < 8; r++) {
         let def = Cfg.get(cfgPrefix + "def");
         let logic = Cfg.get(cfgPrefix + "logic");
         print("Register", r, name, lsb, msb, def, logic)
-        Register.add(name, pcf.createRegister(lsb, msb, def, !logic), {
-            neco: 123
-        });
+        Register.add(name, pcf.createRegister(lsb, msb, def, !logic));
     }
 }

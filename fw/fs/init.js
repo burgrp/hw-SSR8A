@@ -8,6 +8,9 @@ load("api_i2c.js");
 load("api_df_reg.js");
 load("api_df_reg_gpo.js");
 load("api_df_reg_pcf8574.js");
+load("api_df_reboot.js");
+
+Reboot.after(10);
 
 let i2c = I2C.get();
 

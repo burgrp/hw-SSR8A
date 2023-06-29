@@ -1,4 +1,4 @@
-(kicad_sch (version 20221004) (generator eeschema)
+(kicad_sch (version 20230409) (generator eeschema)
 
   (uuid 5ba5eca5-b8fe-4528-b53c-e6a9efffafb7)
 
@@ -152,7 +152,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 134.62 49.53 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6dc6ec2f-2cc3-40c6-9b62-29dd25780987)
-    (property "Reference" "J1" (at 139.192 48.9355 90)
+    (property "Reference" "J2" (at 139.192 48.9355 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x02" (at 139.192 50.6977 90)
@@ -169,28 +169,28 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059ef8064"
-          (reference "J1") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "J2") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f10daa"
-          (reference "J2") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "J3") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f112f3"
-          (reference "J3") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "J4") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f11fa1"
-          (reference "J4") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "J5") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f124db"
-          (reference "J5") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "J6") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f12871"
-          (reference "J6") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "J7") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f130a5"
-          (reference "J7") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "J8") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f13453"
-          (reference "J8") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "J9") (unit 1)
         )
       )
     )
@@ -218,34 +218,30 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059ef8064"
-          (reference "U4") (unit 1) (value "G3MB-SSR") (footprint "Drake:G3MB-SSR")
+          (reference "U4") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f10daa"
-          (reference "U5") (unit 1) (value "G3MB-SSR") (footprint "Drake:G3MB-SSR")
+          (reference "U5") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f112f3"
-          (reference "U6") (unit 1) (value "G3MB-SSR") (footprint "Drake:G3MB-SSR")
+          (reference "U6") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f11fa1"
-          (reference "U7") (unit 1) (value "G3MB-SSR") (footprint "Drake:G3MB-SSR")
+          (reference "U7") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f124db"
-          (reference "U8") (unit 1) (value "G3MB-SSR") (footprint "Drake:G3MB-SSR")
+          (reference "U8") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f12871"
-          (reference "U9") (unit 1) (value "G3MB-SSR") (footprint "Drake:G3MB-SSR")
+          (reference "U9") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f130a5"
-          (reference "U10") (unit 1) (value "G3MB-SSR") (footprint "Drake:G3MB-SSR")
+          (reference "U10") (unit 1)
         )
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f13453"
-          (reference "U11") (unit 1) (value "G3MB-SSR") (footprint "Drake:G3MB-SSR")
+          (reference "U11") (unit 1)
         )
       )
     )
-  )
-
-  (sheet_instances
-    (path "/5ba5eca5-b8fe-4528-b53c-e6a9efffafb7" (page "1"))
   )
 )

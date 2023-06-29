@@ -56,9 +56,8 @@
         }
       ],
       "drc_exclusions": [
-        "silk_edge_clearance|197000000|95500000|4dd9565d-6814-4f5b-b5ea-293c77aa695f|9fe37564-fe5e-4bb7-ac1d-0e4bd14467ca",
-        "silk_edge_clearance|215000000|96000000|8fb69a49-ccb2-4058-9c90-874d7a2e0134|16d9bb28-3874-4e5e-bcf5-804255fc7a45",
-        "starved_thermal|186485000|91500000|5bd245db-cde5-4843-a380-be3d3c62586c|da2150ae-555a-4944-8772-5e6646757e8a"
+        "silk_overlap|136988094|107000000|e42597e1-278d-41ee-95e0-ce31c92362d3|9397155a-ae46-43e7-a01b-29025c6079d0",
+        "starved_thermal|186485000|91500000|5bd245db-cde5-4843-a380-be3d3c62586c|da2150ae-555a-4944-8772-5e6646757e8a|B.Cu"
       ],
       "meta": {
         "filename": "board_design_settings.json",
@@ -86,7 +85,7 @@
         "items_not_allowed": "error",
         "length_out_of_range": "error",
         "lib_footprint_issues": "warning",
-        "lib_footprint_mismatch": "warning",
+        "lib_footprint_mismatch": "ignore",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "missing_courtyard": "ignore",
@@ -96,8 +95,8 @@
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
+        "silk_edge_clearance": "ignore",
+        "silk_over_copper": "ignore",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
@@ -209,10 +208,12 @@
   },
   "erc": {
     "erc_exclusions": [
-      "power_pin_not_driven|1333500|406400|caae9bd2-d347-4850-b7d3-3c647097b329|00000000-0000-0000-0000-000000000000",
-      "power_pin_not_driven|1409700|482600|824e1530-f5f3-4631-9f51-708837799a0d|00000000-0000-0000-0000-000000000000",
-      "power_pin_not_driven|800100|1612900|1e289829-4eec-4261-af94-d48ef449ce9f|00000000-0000-0000-0000-000000000000",
-      "power_pin_not_driven|800100|1739900|4a5f071f-689c-447b-be2e-127e554edc3f|00000000-0000-0000-0000-000000000000"
+      "power_pin_not_driven|1143000|1625600|884638b4-1467-4743-91b3-4fe07ac698c8|00000000-0000-0000-0000-000000000000|/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6|/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6|",
+      "power_pin_not_driven|1333500|406400|caae9bd2-d347-4850-b7d3-3c647097b329|00000000-0000-0000-0000-000000000000|||",
+      "power_pin_not_driven|1409700|482600|824e1530-f5f3-4631-9f51-708837799a0d|00000000-0000-0000-0000-000000000000|/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6|/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6|",
+      "power_pin_not_driven|1409700|482600|824e1530-f5f3-4631-9f51-708837799a0d|00000000-0000-0000-0000-000000000000|||",
+      "power_pin_not_driven|800100|1612900|1e289829-4eec-4261-af94-d48ef449ce9f|00000000-0000-0000-0000-000000000000|||",
+      "power_pin_not_driven|800100|1739900|4a5f071f-689c-447b-be2e-127e554edc3f|00000000-0000-0000-0000-000000000000|||"
     ],
     "meta": {
       "version": 0
@@ -390,18 +391,23 @@
     "rule_severities": {
       "bus_definition_conflict": "error",
       "bus_entry_needed": "error",
-      "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
       "different_unit_footprint": "error",
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
       "extra_units": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
       "lib_symbol_issues": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
       "multiple_net_names": "warning",
       "net_not_bus_member": "warning",
       "no_connect_connected": "warning",
@@ -411,6 +417,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -458,13 +465,64 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "SSR8A.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_fmt_presets": [],
+    "bom_fmt_settings": {
+      "field_delimiter": ",",
+      "keep_line_breaks": false,
+      "keep_tabs": false,
+      "name": "CSV",
+      "ref_delimiter": ",",
+      "ref_range_delimiter": "",
+      "string_delimiter": "\""
+    },
+    "bom_presets": [],
+    "bom_settings": {
+      "exclude_dnp": false,
+      "fields_ordered": [
+        {
+          "group_by": false,
+          "label": "Reference",
+          "name": "Reference",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "Quantity",
+          "show": true
+        }
+      ],
+      "filter_string": "",
+      "group_symbols": true,
+      "name": "Grouped By Value",
+      "sort_asc": true,
+      "sort_field": "Reference"
+    },
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
@@ -478,6 +536,10 @@
       "intersheets_ref_suffix": "",
       "junction_size_choice": 3,
       "label_size_ratio": 0.25,
+      "operating_point_overlay_i_precision": 3,
+      "operating_point_overlay_i_range": "~A",
+      "operating_point_overlay_v_precision": 3,
+      "operating_point_overlay_v_range": "~V",
       "pin_symbol_size": 0.0,
       "text_offset_ratio": 0.08
     },
@@ -521,8 +583,11 @@
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_adjust_passive_values": false,
+    "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
     "spice_save_all_currents": false,
+    "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0

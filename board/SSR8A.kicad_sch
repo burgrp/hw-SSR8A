@@ -1,15 +1,15 @@
-(kicad_sch (version 20221004) (generator eeschema)
+(kicad_sch (version 20230409) (generator eeschema)
 
   (uuid 6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6)
 
   (paper "A4")
 
   (lib_symbols
-    (symbol "Connector:Conn_01x03_Female" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+    (symbol "Connector:Conn_01x03_Pin" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "Conn_01x03_Female" (at 0 -5.08 0)
+      (property "Value" "Conn_01x03_Pin" (at 0 -5.08 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -18,61 +18,64 @@
       (property "Datasheet" "~" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
+      (property "ki_locked" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
       (property "ki_keywords" "connector" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+      (property "ki_description" "Generic connector, single row, 01x03, script generated" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "Conn_01x03_Female_1_1"
-        (arc (start 0 -2.032) (mid -0.5058 -2.54) (end 0 -3.048)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
+      (symbol "Conn_01x03_Pin_1_1"
         (polyline
           (pts
-            (xy -1.27 -2.54)
-            (xy -0.508 -2.54)
+            (xy 1.27 -2.54)
+            (xy 0.8636 -2.54)
           )
           (stroke (width 0.1524) (type default))
           (fill (type none))
         )
         (polyline
           (pts
-            (xy -1.27 0)
-            (xy -0.508 0)
+            (xy 1.27 0)
+            (xy 0.8636 0)
           )
           (stroke (width 0.1524) (type default))
           (fill (type none))
         )
         (polyline
           (pts
-            (xy -1.27 2.54)
-            (xy -0.508 2.54)
+            (xy 1.27 2.54)
+            (xy 0.8636 2.54)
           )
           (stroke (width 0.1524) (type default))
           (fill (type none))
         )
-        (arc (start 0 0.508) (mid -0.5058 0) (end 0 -0.508)
+        (rectangle (start 0.8636 -2.413) (end 0 -2.667)
           (stroke (width 0.1524) (type default))
-          (fill (type none))
+          (fill (type outline))
         )
-        (arc (start 0 3.048) (mid -0.5058 2.54) (end 0 2.032)
+        (rectangle (start 0.8636 0.127) (end 0 -0.127)
           (stroke (width 0.1524) (type default))
-          (fill (type none))
+          (fill (type outline))
         )
-        (pin passive line (at -5.08 2.54 0) (length 3.81)
+        (rectangle (start 0.8636 2.667) (end 0 2.413)
+          (stroke (width 0.1524) (type default))
+          (fill (type outline))
+        )
+        (pin passive line (at 5.08 2.54 180) (length 3.81)
           (name "Pin_1" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 0 0) (length 3.81)
+        (pin passive line (at 5.08 0 180) (length 3.81)
           (name "Pin_2" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+        (pin passive line (at 5.08 -2.54 180) (length 3.81)
           (name "Pin_3" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
@@ -307,6 +310,21 @@
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Sim.Name" "kicad_builtin_varistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Sim.Device" "SUBCKT" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Sim.Pins" "1=A 2=B" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Sim.Params" "threshold=1k" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_keywords" "VDR resistance" (at 0 0 0)
@@ -649,35 +667,35 @@
         )
       )
     )
-    (symbol "Regulator_Linear:LM1117-3.3" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+    (symbol "Regulator_Linear:AMS1117-3.3" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -3.81 3.175 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "LM1117-3.3" (at 0 3.175 0)
+      (property "Value" "AMS1117-3.3" (at 0 3.175 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "" (at 0 0 0)
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1117.pdf" (at 0 0 0)
+      (property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf" (at 2.54 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_keywords" "linear regulator ldo fixed positive" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, TO-220/TO-252/TO-263/SOT-223" (at 0 0 0)
+      (property "ki_description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "SOT?223* TO?263* TO?252* TO?220*" (at 0 0 0)
+      (property "ki_fp_filters" "SOT?223*TabPin2*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "LM1117-3.3_0_1"
+      (symbol "AMS1117-3.3_0_1"
         (rectangle (start -5.08 -5.08) (end 5.08 1.905)
           (stroke (width 0.254) (type default))
           (fill (type background))
         )
       )
-      (symbol "LM1117-3.3_1_1"
+      (symbol "AMS1117-3.3_1_1"
         (pin power_in line (at 0 -7.62 90) (length 2.54)
           (name "GND" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
@@ -705,7 +723,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
@@ -757,7 +775,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
@@ -809,7 +827,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
@@ -838,7 +856,6 @@
     )
   )
 
-
   (junction (at 140.97 48.26) (diameter 0) (color 0 0 0 0)
     (uuid 0726d7d4-80a4-4aa4-81c2-adc58590a45e)
   )
@@ -847,6 +864,9 @@
   )
   (junction (at 240.03 85.09) (diameter 0) (color 0 0 0 0)
     (uuid 17b6e390-99b3-411f-9af3-c03c1cb28b87)
+  )
+  (junction (at 91.44 78.74) (diameter 0) (color 0 0 0 0)
+    (uuid 196a33b2-039d-42b5-9d9e-604bb3cac764)
   )
   (junction (at 240.03 110.49) (diameter 0) (color 0 0 0 0)
     (uuid 24f3a0d4-ce10-42a1-b180-ab8ac3de6b0b)
@@ -950,6 +970,10 @@
   (wire (pts (xy 240.03 59.69) (xy 240.03 72.39))
     (stroke (width 0) (type default))
     (uuid 14e49252-5365-406a-bd12-bc7253f1abe8)
+  )
+  (wire (pts (xy 91.44 77.47) (xy 91.44 78.74))
+    (stroke (width 0) (type default))
+    (uuid 1b49270f-7528-4451-9a0b-063c0d87da03)
   )
   (wire (pts (xy 208.28 59.69) (xy 208.28 46.99))
     (stroke (width 0) (type default))
@@ -1078,6 +1102,10 @@
   (wire (pts (xy 240.03 72.39) (xy 237.49 72.39))
     (stroke (width 0) (type default))
     (uuid 938648b6-265a-4cf1-827a-3e99e657f340)
+  )
+  (wire (pts (xy 91.44 78.74) (xy 96.52 78.74))
+    (stroke (width 0) (type default))
+    (uuid 94169d05-ac0e-4f33-ab94-53144d9ae85e)
   )
   (wire (pts (xy 208.28 123.19) (xy 208.28 110.49))
     (stroke (width 0) (type default))
@@ -1460,7 +1488,7 @@
   (symbol (lib_id "Device:R") (at 58.42 87.63 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000059c48b42)
-    (property "Reference" "R2" (at 60.96 90.17 90)
+    (property "Reference" "R3" (at 60.96 90.17 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4k7" (at 55.88 90.17 90)
@@ -1469,7 +1497,7 @@
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 58.42 89.408 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 58.42 87.63 0)
+    (property "Datasheet" "~" (at 58.42 87.63 0)
       (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid 51915792-4096-4523-8cd3-5e287aac9d52))
@@ -1477,7 +1505,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "R2") (unit 1) (value "4k7") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -1486,7 +1514,7 @@
   (symbol (lib_id "Device:R") (at 58.42 82.55 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000059ef5e75)
-    (property "Reference" "R1" (at 60.96 80.01 90)
+    (property "Reference" "R2" (at 60.96 80.01 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4k7" (at 55.88 80.01 90)
@@ -1495,7 +1523,7 @@
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 58.42 80.772 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 58.42 82.55 0)
+    (property "Datasheet" "~" (at 58.42 82.55 0)
       (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid 7b2092ed-635e-4cc5-b784-48653259a823))
@@ -1503,7 +1531,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "R1") (unit 1) (value "4k7") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -1521,7 +1549,7 @@
     (property "Footprint" "Drake:DG235-3.81-02P" (at 43.18 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 43.18 34.29 0)
+    (property "Datasheet" "~" (at 43.18 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 270f5c4d-5e7a-4063-b978-e1a128929f1d))
@@ -1529,7 +1557,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "IN1") (unit 1) (value "Conn_01x02") (footprint "Drake:DG235-3.81-02P")
+          (reference "IN1") (unit 1)
         )
       )
     )
@@ -1557,7 +1585,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "X1") (unit 1) (value "I2C") (footprint "Drake:Micro-Match-FOB-4")
+          (reference "X1") (unit 1)
         )
       )
     )
@@ -1566,7 +1594,7 @@
   (symbol (lib_id "Device:R") (at 50.8 118.11 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005b453945)
-    (property "Reference" "R3" (at 48.26 115.57 90)
+    (property "Reference" "R1" (at 48.26 115.57 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "270R" (at 53.34 115.57 90)
@@ -1575,7 +1603,7 @@
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 50.8 116.332 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 50.8 118.11 0)
+    (property "Datasheet" "~" (at 50.8 118.11 0)
       (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid 577d9c97-2406-4a0a-96b5-d0105325c3bc))
@@ -1583,7 +1611,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "R3") (unit 1) (value "270R") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -1601,7 +1629,7 @@
     (property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" (at 63.5 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 63.5 118.11 0)
+    (property "Datasheet" "~" (at 63.5 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 22b1ffef-6c75-46ec-8140-6f85e57fc703))
@@ -1609,7 +1637,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "D1") (unit 1) (value "LED") (footprint "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -1618,7 +1646,7 @@
   (symbol (lib_id "power:GND") (at 67.31 118.11 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005b45445d)
-    (property "Reference" "#PWR09" (at 73.66 118.11 0)
+    (property "Reference" "#PWR02" (at 73.66 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 71.7042 117.983 0)
@@ -1634,7 +1662,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR09") (unit 1) (value "GND") (footprint "")
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -1643,7 +1671,7 @@
   (symbol (lib_id "power:+5V") (at 128.27 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0081f21a-cb7f-4fe5-8ed8-00b0656218aa)
-    (property "Reference" "#PWR0106" (at 128.27 44.45 0)
+    (property "Reference" "#PWR06" (at 128.27 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 128.27 37.1571 0)
@@ -1659,7 +1687,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR0106") (unit 1) (value "+5V") (footprint "")
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -1668,7 +1696,7 @@
   (symbol (lib_id "power:+5V") (at 208.28 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 148d8bee-746f-4726-b2f9-37c6b64be2c1)
-    (property "Reference" "#PWR0101" (at 208.28 43.18 0)
+    (property "Reference" "#PWR010" (at 208.28 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 208.28 35.8871 0)
@@ -1684,32 +1712,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR0101") (unit 1) (value "+5V") (footprint "")
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 96.52 78.74 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 2c28f3f5-637a-4eeb-bf95-ae0600ceeed0)
-    (property "Reference" "#PWR0107" (at 100.33 78.74 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 93.345 79.0266 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 96.52 78.74 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 96.52 78.74 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6f61dd1c-03d9-43b7-b4d6-b71eac3bc991))
-    (instances
-      (project "SSR8A"
-        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR0107") (unit 1) (value "+3V3") (footprint "")
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -1718,10 +1721,10 @@
   (symbol (lib_id "Device:C") (at 151.13 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 301908de-72c6-4a79-9af4-da1d39745d98)
-    (property "Reference" "C2" (at 154.051 43.8555 0)
+    (property "Reference" "C3" (at 154.051 43.8555 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 154.051 45.6177 0)
+    (property "Value" "47u" (at 154.051 45.6177 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 152.0952 48.26 0)
@@ -1735,19 +1738,19 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "C2") (unit 1) (value "C") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+          (reference "C3") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Connector:Conn_01x03_Female") (at 60.96 139.7 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+  (symbol (lib_id "Connector:Conn_01x03_Pin") (at 60.96 139.7 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 343ce60d-df69-40d1-85b5-e0946ada208f)
-    (property "Reference" "J2" (at 61.6712 139.1055 0)
+    (property "Reference" "J2" (at 66.04 138.43 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "PROG" (at 61.6712 140.8677 0)
+    (property "Value" "PROG" (at 68.58 140.97 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 60.96 139.7 0)
@@ -1762,12 +1765,12 @@
     (instances
       (project "easun-smp-telemetry"
         (path "/32f9e9f8-9d15-4d51-acc1-705de5fd2b71"
-          (reference "J2") (unit 1) (value "PROG") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+          (reference "J2") (unit 1)
         )
       )
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "J9") (unit 1) (value "PROG") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+          (reference "J1") (unit 1)
         )
       )
     )
@@ -1776,7 +1779,7 @@
   (symbol (lib_id "power:+3V3") (at 160.02 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 493f872a-3737-4df8-8bfb-457d68925433)
-    (property "Reference" "#PWR0108" (at 160.02 44.45 0)
+    (property "Reference" "#PWR09" (at 160.02 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 160.02 37.1571 0)
@@ -1792,7 +1795,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR0108") (unit 1) (value "+3V3") (footprint "")
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -1801,7 +1804,7 @@
   (symbol (lib_id "Espressif:ESP32-C3-WROOM-02") (at 123.19 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 49773eef-85cb-4714-bbad-a8301c52ef8c)
-    (property "Reference" "U3" (at 123.825 65.8749 0)
+    (property "Reference" "U2" (at 123.825 65.8749 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ESP32-C3-WROOM-02" (at 123.825 67.6371 0)
@@ -1835,25 +1838,25 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "U3") (unit 1) (value "ESP32-C3-WROOM-02") (footprint "Espressif:ESP32-C3-WROOM-02")
+          (reference "U2") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Regulator_Linear:LM1117-3.3") (at 140.97 40.64 0) (unit 1)
+  (symbol (lib_id "Regulator_Linear:AMS1117-3.3") (at 140.97 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4aa7a513-2d4e-4ed7-804d-ac4e6ee9e1ce)
-    (property "Reference" "U1" (at 140.97 35.9029 0)
+    (property "Reference" "U3" (at 140.97 35.9029 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LM1117-3.3" (at 140.97 37.6651 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (at 140.97 40.64 0)
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (at 140.97 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1117.pdf" (at 140.97 40.64 0)
+    (property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf" (at 143.51 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 824e1530-f5f3-4631-9f51-708837799a0d))
@@ -1862,7 +1865,47 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "U1") (unit 1) (value "LM1117-3.3") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
+          (reference "U3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 83.82 78.74 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 4eb77787-b47c-4fd7-a955-6a92dd2e32a9)
+    (property "Reference" "#PWR047" (at 77.47 78.74 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 82.55 76.2 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 83.82 78.74 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 83.82 78.74 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a45b957d-1a59-4995-bde0-d5afd12d281f))
+    (instances
+      (project "cpu"
+        (path "/311bb903-b598-4d0a-b7e9-7724eb082834"
+          (reference "#PWR047") (unit 1)
+        )
+      )
+      (project "easun-smp-telemetry"
+        (path "/32f9e9f8-9d15-4d51-acc1-705de5fd2b71"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
+          (reference "#PWR03") (unit 1)
+        )
+      )
+      (project "nanook-as"
+        (path "/bd0055da-0838-4c4c-b506-87ee1119a3e6"
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
@@ -1886,7 +1929,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.7mm_Pad_Via")
+          (reference "H1") (unit 1)
         )
       )
     )
@@ -1895,10 +1938,10 @@
   (symbol (lib_id "Device:C") (at 128.27 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6bc2cb0e-b073-4a23-858c-dfb3175033c0)
-    (property "Reference" "C1" (at 131.191 43.8555 0)
+    (property "Reference" "C2" (at 131.191 43.8063 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 131.191 45.6177 0)
+    (property "Value" "10u" (at 131.191 45.7273 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 129.2352 48.26 0)
@@ -1912,7 +1955,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "C1") (unit 1) (value "C") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -1921,7 +1964,7 @@
   (symbol (lib_id "power:GND") (at 151.13 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6fa5e380-302f-4d54-aa07-9970ffa38d02)
-    (property "Reference" "#PWR0103" (at 151.13 135.89 0)
+    (property "Reference" "#PWR08" (at 151.13 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 151.13 133.5961 0)
@@ -1937,7 +1980,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -1967,7 +2010,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "X2") (unit 1) (value "I2C") (footprint "Drake:Micro-Match-FOB-6")
+          (reference "X2") (unit 1)
         )
       )
     )
@@ -1976,7 +2019,7 @@
   (symbol (lib_id "Drake:HLK-PM01") (at 111.76 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 957d74be-6c84-4f7e-9d4a-d158803b70eb)
-    (property "Reference" "U2" (at 111.76 35.0571 0)
+    (property "Reference" "U1" (at 111.76 35.0571 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "HLK-PM01" (at 111.76 37.1209 0)
@@ -1995,7 +2038,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "U2") (unit 1) (value "HLK-PM01") (footprint "Drake:HLK-PM01")
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -2004,7 +2047,7 @@
   (symbol (lib_id "power:+3V3") (at 96.52 127 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a51ffe63-5d06-4a35-af4f-7f0704e36717)
-    (property "Reference" "#PWR0102" (at 100.33 127 0)
+    (property "Reference" "#PWR05" (at 100.33 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 93.345 127.2866 90)
@@ -2020,7 +2063,94 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR0102") (unit 1) (value "+3V3") (footprint "")
+          (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 91.44 73.66 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid b1bdb26d-7a72-4962-acac-0bc77e245cff)
+    (property "Reference" "R18" (at 93.98 71.12 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "10k" (at 93.98 76.2 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 89.662 73.66 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 91.44 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7fab293b-c0ae-4404-aeaf-2bcd250fa79b))
+    (pin "2" (uuid 888b57a9-cde7-41c7-9656-5694239fd610))
+    (instances
+      (project "cpu"
+        (path "/311bb903-b598-4d0a-b7e9-7724eb082834"
+          (reference "R18") (unit 1)
+        )
+      )
+      (project "easun-smp-telemetry"
+        (path "/32f9e9f8-9d15-4d51-acc1-705de5fd2b71"
+          (reference "R2") (unit 1)
+        )
+      )
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
+          (reference "R4") (unit 1)
+        )
+      )
+      (project "nanook-as"
+        (path "/bd0055da-0838-4c4c-b506-87ee1119a3e6/00000000-0000-0000-0000-00005c22e635"
+          (reference "R2") (unit 1)
+        )
+        (path "/bd0055da-0838-4c4c-b506-87ee1119a3e6/00000000-0000-0000-0000-00005c22f26b"
+          (reference "R4") (unit 1)
+        )
+        (path "/bd0055da-0838-4c4c-b506-87ee1119a3e6"
+          (reference "R1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 91.44 69.85 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ba2ecf2b-ac72-4152-9289-3c38398d264c)
+    (property "Reference" "#PWR055" (at 91.44 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 91.44 63.5 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 91.44 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 91.44 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 40391cbe-7091-49e5-ba52-f49896266733))
+    (instances
+      (project "cpu"
+        (path "/311bb903-b598-4d0a-b7e9-7724eb082834"
+          (reference "#PWR055") (unit 1)
+        )
+      )
+      (project "easun-smp-telemetry"
+        (path "/32f9e9f8-9d15-4d51-acc1-705de5fd2b71"
+          (reference "#PWR07") (unit 1)
+        )
+      )
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
+          (reference "#PWR04") (unit 1)
+        )
+      )
+      (project "nanook-as"
+        (path "/bd0055da-0838-4c4c-b506-87ee1119a3e6"
+          (reference "#PWR0106") (unit 1)
         )
       )
     )
@@ -2029,7 +2159,7 @@
   (symbol (lib_id "power:+5V") (at 50.8 85.09 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ba50235c-9e5e-4a4f-93cf-dbac9c42f39e)
-    (property "Reference" "#PWR0104" (at 54.61 85.09 0)
+    (property "Reference" "#PWR01" (at 54.61 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 47.625 84.8034 90)
@@ -2045,7 +2175,48 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR0104") (unit 1) (value "+5V") (footprint "")
+          (reference "#PWR01") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 87.63 78.74 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid c525cb5a-38e0-442b-b426-4548b341ac93)
+    (property "Reference" "C14" (at 85.09 72.39 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "1u" (at 85.09 74.93 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 83.82 79.7052 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 87.63 78.74 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b408913c-07fc-47ba-971c-e493a08cc919))
+    (pin "2" (uuid 816db102-5095-4d72-b533-d10d50917308))
+    (instances
+      (project "cpu"
+        (path "/311bb903-b598-4d0a-b7e9-7724eb082834"
+          (reference "C14") (unit 1)
+        )
+      )
+      (project "easun-smp-telemetry"
+        (path "/32f9e9f8-9d15-4d51-acc1-705de5fd2b71"
+          (reference "C9") (unit 1)
+        )
+      )
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
+          (reference "C1") (unit 1)
+        )
+      )
+      (project "nanook-as"
+        (path "/bd0055da-0838-4c4c-b506-87ee1119a3e6"
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -2066,17 +2237,32 @@
     (property "Datasheet" "~" (at 92.71 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "Sim.Name" "kicad_builtin_varistor" (at 92.71 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Device" "SUBCKT" (at 92.71 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Pins" "1=A 2=B" (at 92.71 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Params" "threshold=1k" (at 92.71 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp" (at 92.71 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid e062eb34-a2b2-43f5-9369-7553aa93cc78))
     (pin "2" (uuid 3a153dbc-5ed8-4802-8c6f-73dd11c2761b))
     (instances
       (project "horizontal"
         (path "/32f9e9f8-9d15-4d51-acc1-705de5fd2b71"
-          (reference "RV1") (unit 1) (value "B72650M251K72") (footprint "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder")
+          (reference "RV1") (unit 1)
         )
       )
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "RV1") (unit 1) (value "B72650M251K72") (footprint "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder")
+          (reference "RV1") (unit 1)
         )
       )
     )
@@ -2106,7 +2292,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "X3") (unit 1) (value "I2C") (footprint "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical")
+          (reference "X3") (unit 1)
         )
       )
     )
@@ -2115,7 +2301,7 @@
   (symbol (lib_id "power:GND") (at 140.97 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e8d988b8-23be-49d1-8f5d-9f022c4e19be)
-    (property "Reference" "#PWR0105" (at 140.97 57.15 0)
+    (property "Reference" "#PWR07" (at 140.97 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 140.97 54.8561 0)
@@ -2131,7 +2317,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "#PWR0105") (unit 1) (value "GND") (footprint "")
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -2140,10 +2326,10 @@
   (symbol (lib_id "Device:C") (at 160.02 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f2ba9292-1904-4096-a3b0-c49ac1ea96e1)
-    (property "Reference" "C3" (at 162.941 43.8555 0)
+    (property "Reference" "C4" (at 162.941 43.8063 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 162.941 45.6177 0)
+    (property "Value" "47u" (at 162.941 45.7273 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 160.9852 48.26 0)
@@ -2157,7 +2343,7 @@
     (instances
       (project "SSR8A"
         (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6"
-          (reference "C3") (unit 1) (value "C") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -2189,6 +2375,11 @@
       (effects (font (size 1.524 1.524)) (justify right))
       (uuid 5dde9339-eb7f-4573-88ce-61d00e68a311)
     )
+    (instances
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "3"))
+      )
+    )
   )
 
   (sheet (at 210.82 57.15) (size 26.67 7.62) (fields_autoplaced)
@@ -2216,6 +2407,11 @@
     (pin "MAINS-N" bidirectional (at 237.49 62.23 0)
       (effects (font (size 1.524 1.524)) (justify right))
       (uuid 7a86448a-8cc2-4564-aee8-9b292b41477a)
+    )
+    (instances
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "4"))
+      )
     )
   )
 
@@ -2245,6 +2441,11 @@
       (effects (font (size 1.524 1.524)) (justify right))
       (uuid 74ebcc2d-f914-46da-9677-0c7d5e17d84a)
     )
+    (instances
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "5"))
+      )
+    )
   )
 
   (sheet (at 210.82 82.55) (size 26.67 7.62) (fields_autoplaced)
@@ -2272,6 +2473,11 @@
     (pin "MAINS-N" bidirectional (at 237.49 87.63 0)
       (effects (font (size 1.524 1.524)) (justify right))
       (uuid 839589df-5892-4294-8b0c-e2ddb38ef4d3)
+    )
+    (instances
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "6"))
+      )
     )
   )
 
@@ -2301,6 +2507,11 @@
       (effects (font (size 1.524 1.524)) (justify right))
       (uuid 9f6ec1ae-2b63-49bb-ba15-c8a55ba014f3)
     )
+    (instances
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "7"))
+      )
+    )
   )
 
   (sheet (at 210.82 107.95) (size 26.67 7.62) (fields_autoplaced)
@@ -2328,6 +2539,11 @@
     (pin "MAINS-N" bidirectional (at 237.49 113.03 0)
       (effects (font (size 1.524 1.524)) (justify right))
       (uuid 9a7e01ce-5849-4ec9-83a0-0af79597908b)
+    )
+    (instances
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "8"))
+      )
     )
   )
 
@@ -2357,6 +2573,11 @@
       (effects (font (size 1.524 1.524)) (justify right))
       (uuid 4b716f46-9152-4183-89fd-6fd0e0bce19a)
     )
+    (instances
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "9"))
+      )
+    )
   )
 
   (sheet (at 210.82 133.35) (size 26.67 7.62) (fields_autoplaced)
@@ -2385,17 +2606,14 @@
       (effects (font (size 1.524 1.524)) (justify right))
       (uuid 5a9f7892-8427-4092-8b66-76be02cb3cd3)
     )
+    (instances
+      (project "SSR8A"
+        (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "10"))
+      )
+    )
   )
 
   (sheet_instances
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6" (page "1"))
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059ef8064" (page "3"))
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f10daa" (page "4"))
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f112f3" (page "5"))
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f11fa1" (page "6"))
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f124db" (page "7"))
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f12871" (page "8"))
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f130a5" (page "9"))
-    (path "/6b7dd4b9-634f-41b4-b846-9b2e2d6d43c6/00000000-0000-0000-0000-000059f13453" (page "10"))
+    (path "/" (page "1"))
   )
 )

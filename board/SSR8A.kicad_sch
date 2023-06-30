@@ -1810,7 +1810,7 @@
     (property "Value" "ESP32-C3-WROOM-02" (at 123.825 67.6371 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Espressif:ESP32-C3-WROOM-02" (at 123.19 133.35 0)
+    (property "Footprint" "Drake:ESP32-C3-WROOM-02 Handsolder" (at 123.19 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf" (at 123.19 135.89 0)

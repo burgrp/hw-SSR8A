@@ -7,6 +7,8 @@ import sys
 sys.path.append("/")
 import site_config
 import board_config
+import device_config
+
 
 print("DO6TS1A")
 
@@ -19,7 +21,7 @@ class ChanelRegister(mqtt_reg.ServerRegister):
         super().__init__(
             name = name,
             meta = {
-                "device": board_config.device_name,
+                "device": device_config.device_name,
                 "type": "number"
             },
             value = default,
@@ -41,7 +43,7 @@ class TempRegister(mqtt_reg.ServerReadOnlyRegister):
         super().__init__(
             name = name,
             meta = {
-                "device": board_config.device_name,
+                "device": device_config.device_name,
                 "type": "number",
                 "unit": "°C"
             },
@@ -57,8 +59,8 @@ class TempRegister(mqtt_reg.ServerReadOnlyRegister):
         temp = (-(temp & mask) + (temp & ~mask)) * 0.125
         self.set_value_local(temp)
 
-channelRegisters = list(map(lambda cfg: ChanelRegister(cfg["gpio"], cfg["name"], cfg.get("logic", True), cfg.get("default", 0)), board_config.channels))
-tempRegisters = list(map(lambda cfg: TempRegister(cfg["address"], cfg["name"]), board_config.sensors))
+channelRegisters = list(map(lambda cfg: ChanelRegister(cfg["gpio"], cfg["name"], cfg.get("logic", True), cfg.get("default", False)), device_config.channels))
+tempRegisters = list(map(lambda cfg: TempRegister(cfg["address"], cfg["name"]), device_config.sensors))
 
 registry = mqtt_reg.Registry(
     wifi_ssid=site_config.wifi_ssid,

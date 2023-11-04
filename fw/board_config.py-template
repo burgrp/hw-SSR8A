@@ -1,0 +1,8 @@
+debug=True
+wifi_led_pin=1
+
+loop_period_ms=1000
+watchdog_ms=10000
+
+temp_sda=2
+temp_scl=3
